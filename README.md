@@ -1,6 +1,8 @@
 tutum-docker-lamp
 =================
 
+[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)
+
 Out-of-the-box LAMP image (PHP+MySQL)
 
 
@@ -72,7 +74,7 @@ Simply connect from your PHP code with this user:
 Connecting to the bundled MySQL server from outside the container
 -----------------------------------------------------------------
 
-The first time that you run your container, a new user `admin` with all privileges 
+The first time that you run your container, a new user `admin` with all privileges
 will be created in MySQL with a random password. To get the password, check the logs
 of the container by running:
 
@@ -95,7 +97,7 @@ You can then connect to MySQL:
 
 	 mysql -uadmin -p47nnf4FweaKu
 
-Remember that the `root` user does not allow connections from outside the container - 
+Remember that the `root` user does not allow connections from outside the container -
 you should use this `admin` user instead!
 
 
@@ -115,7 +117,7 @@ You can now test your new admin password:
 Disabling .htaccess
 --------------------
 
-`.htacess` is enabled by default. To disable `.htacess`, you can remove the following contents from `Dockerfile`
+`.htaccess` is enabled by default. To disable `.htaccess`, you can remove the following contents from `Dockerfile`
 
 	# config to enable .htaccess
     ADD apache_default /etc/apache2/sites-available/000-default.conf
